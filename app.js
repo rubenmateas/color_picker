@@ -56,10 +56,21 @@ function display(){
 		document.getElementById("output").innerHTML="";
 	}
 	else{
+
+    function rgbToHex(rgb) {
+      var hex = Number(rgb).toString(16);
+      if (hex.length < 2) {
+           hex = "0" + hex;
+      }
+      return hex;
+    };
+
+
     document.getElementById("output").innerHTML="OUTPUT  <hr /><br /><br />Red: "
       +dataOne+"<br /><br />  Green: "
       +dataTwo+"<br /><br />  Blue: "
-      +dataThree;
+      +dataThree+"<br /><br />  Hex: #"
+      +rgbToHex(dataOne)+rgbToHex(dataTwo)+rgbToHex(dataThree);
     document.getElementById("output").style.backgroundColor = "rgb(" + dataOne + "," + dataTwo + "," + dataThree + ")";
 	}
 }
