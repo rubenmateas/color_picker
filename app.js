@@ -35,6 +35,7 @@ function save(){
   let inputThree = document.getElementById("input3").value;
 
   if( (inputOne > 255 || inputOne < 0) || (inputTwo > 255 || inputTwo < 0) || (inputThree > 255 || inputThree < 0)){
+    clear();
     alert("Please enter a number between 0 and 255");
   }
   else {
